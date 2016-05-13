@@ -35,7 +35,6 @@ nextMail.factory('nextmailfactory', function ($http) {
         getBankNames: function () {
             var promise = $http.get(apiURL + '/banks')
                 .then(function (response) {
-                    console.log(response);
                     return response;
                 });
             return promise;
@@ -43,7 +42,6 @@ nextMail.factory('nextmailfactory', function ($http) {
         getCityList: function (bankName) {
             var promise = $http.get(apiURL + '/city/' + bankName.selected)
                 .then(function (response) {
-                    console.log(response);
                     return response;
                 });
             return promise;
@@ -53,7 +51,6 @@ nextMail.factory('nextmailfactory', function ($http) {
                 bank_name: bankName.selected,
                 city: cityName.selected
             }).then(function (response) {
-                console.log(response);
                 return response;
             });
             return promise;

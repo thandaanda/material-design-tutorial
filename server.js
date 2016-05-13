@@ -25,5 +25,5 @@ app.route('/*')
     .get(function (req, res) {
         res.sendfile(app.get('appPath') + '/index.html');
     });
-app.listen(8080);
-console.log("App listening on port 8080");
+app.listen(process.env.PORT || 5000);
+console.log("App listening on port" + process.env.PORT);

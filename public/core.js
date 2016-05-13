@@ -30,7 +30,7 @@ nextMail.controller('MainCtrl', ['$scope', '$mdSidenav', 'nextmailfactory', '$lo
 
 
 nextMail.factory('nextmailfactory', function ($http) {
-    var apiURL = 'http://localhost:8080/api'
+    var apiURL = 'https://intense-everglades-72453.herokuapp.com/api'
     var nextmailfactory = {
         getBankNames: function () {
             var promise = $http.get(apiURL + '/banks')
